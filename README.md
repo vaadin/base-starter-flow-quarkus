@@ -1,8 +1,8 @@
 # Project Base for Vaadin Flow and Quarkus
 
-This project can be used as a starting point to create your own Vaadin Flow application with CDI. It contains all the necessary configuration with some placeholder files to get you started.
+This project can be used as a starting point to create your own Vaadin Flow application for Quarkus. It contains all the necessary configuration with some placeholder files to get you started.
 
-Quarkus requires Java 11.
+Quarkus 2.0+ requires Java 11. Java 8 is still supported for 1.11+ releases, which should work with this starter.
 
 ## Running the Application
 

@@ -9,4 +9,5 @@ import com.vaadin.quarkus.QuarkusVaadinServlet;
         @WebInitParam(name = "org.atmosphere.websocket.suppressJSR356", value = "true") })
 public class TestServlet extends QuarkusVaadinServlet{
     // This servlet is here to give the suppressJSR356 parameter
+    // Needed until https://github.com/vaadin/quarkus/issues/5 is fixed
 }
