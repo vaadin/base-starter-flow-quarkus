@@ -22,7 +22,7 @@
 
         <vaadin.version>21.0-SNAPSHOT</vaadin.version>
 
-        <quarkus.version>2.0.0.CR3</quarkus.version>
+        <quarkus.version>2.2.1.Final</quarkus.version>
     </properties>
 
     <repositories>
