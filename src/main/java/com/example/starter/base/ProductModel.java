@@ -11,7 +11,7 @@ import com.vaadin.quarkus.annotation.NormalRouteScoped;
 import com.vaadin.quarkus.annotation.RouteScopeOwner;
 
 @NormalRouteScoped
-@RouteScopeOwner(ProductSelectView.class)
+@RouteScopeOwner(MainView.class)
 public class ProductModel implements Serializable {
 
     private String uuid = UUID.randomUUID().toString();

@@ -1,8 +1,8 @@
 package com.example.starter.base;
 
-import com.vaadin.quarkus.annotation.UIScoped;
+import com.vaadin.quarkus.annotation.NormalUIScoped;
 
-@UIScoped
+@NormalUIScoped
 public class LocationModel {
 
     private Location selectedLocation;

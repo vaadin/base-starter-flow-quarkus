@@ -5,14 +5,16 @@ import javax.inject.Inject;
 
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RoutePrefix;
 import com.vaadin.flow.router.RouterLayout;
+import com.vaadin.quarkus.annotation.RouteScoped;
+import com.vaadin.quarkus.annotation.UIScoped;
 
+@UIScoped
+@Route("")
 @RoutePrefix("product")
 public class MainView extends VerticalLayout implements RouterLayout {
-
-    @Inject
-    private LocationModel locationModel;
 
     @PostConstruct
     private void init() {
