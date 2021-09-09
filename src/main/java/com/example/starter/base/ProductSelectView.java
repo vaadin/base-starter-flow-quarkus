@@ -13,25 +13,20 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.quarkus.annotation.RouteScopeOwner;
 import com.vaadin.quarkus.annotation.RouteScoped;
-import com.vaadin.quarkus.annotation.UIScoped;
 
-@UIScoped
+@RouteScoped
 @Route(value = "select", layout = MainView.class)
 public class ProductSelectView extends VerticalLayout implements AfterNavigationObserver {
 
+    private final Select<Product> select = new Select<>();
+    private final Span locationSpan = new Span("Unknown Location");
     @Inject
-    @RouteScopeOwner(MainView.class)
+    @RouteScopeOwner(ProductSelectView.class)
     private ProductModel productModel;
-
     @Inject
     private LocationModel locationModel;
-
     @Inject
     private ProductService productService;
-
-    private final Select<Product> select = new Select<>();
-
-    private final Span locationSpan = new Span("Unknown Location");
 
     @PostConstruct
     private void init() {
@@ -45,7 +40,8 @@ public class ProductSelectView extends VerticalLayout implements AfterNavigation
         add(select);
         add(locationSpan);
 
-        add(new RouterLink("Select location", LocationSelectView.class));
+        add(new RouterLink("Select location", LocationSelectView.class),
+                new RouterLink("Fill order", OrderView.class));
     }
 
     @Override
@@ -54,11 +50,12 @@ public class ProductSelectView extends VerticalLayout implements AfterNavigation
         if (selectedProduct != null) {
             select.setValue(selectedProduct);
         }
+        showLocation();
     }
 
     private void showLocation() {
         Location selectedLocation = locationModel.getSelectedLocation();
         locationSpan.setText("Location: " + (selectedLocation != null ?
-                    selectedLocation.getCity() : "All"));
+                selectedLocation.getCity() : "All"));
     }
 }

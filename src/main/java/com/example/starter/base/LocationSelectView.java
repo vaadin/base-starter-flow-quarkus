@@ -33,7 +33,8 @@ public class LocationSelectView extends VerticalLayout implements AfterNavigatio
                 locationModel.setSelectedLocation(event.getValue()));
         add(new H3("Step 1: Select a location to order product from"));
         add(locationSelect);
-        add(new RouterLink("Select a product", ProductSelectView.class));
+        add(new RouterLink("Select a product", ProductSelectView.class),
+                new RouterLink("Fill order", OrderView.class));
     }
 
     @Override
