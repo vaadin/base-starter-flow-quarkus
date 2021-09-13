@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'io.quarkus'
+    id 'com.vaadin'
+}
+
+defaultTasks("build")
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-parameters'
+}
+
+repositories {
+    mavenCentral()
+    maven { setUrl("https://maven.vaadin.com/vaadin-prereleases") }
+    mavenLocal()
+}
+
+// The following pnpmEnable = true is not needed as pnpm is used by default,
+// this is just an example of how to configure the Gradle Vaadin Plugin:
+// for more configuraion options please see: https://vaadin.com/docs/latest/guide/start/gradle/#all-options
+vaadin {
+    pnpmEnable = true
+}
+
+dependencies {
+    implementation enforcedPlatform("com.vaadin:vaadin-bom:$vaadinVersion") {
+        // Remove exclude when jandex is published 21.0.1+
+        exclude group: 'com.vaadin', module: 'vaadin-core-jandex'
+    }
+    implementation enforcedPlatform("io.quarkus.platform:quarkus-bom:$quarkusVersion")
+
+    // Vaadin
+    implementation("com.vaadin:vaadin-core") {
+        // Remove exclude when jandex is published 21.0.1+
+        exclude group: 'com.vaadin', module: 'vaadin-core-jandex'
+    }
+    implementation("com.vaadin:vaadin-core-jandex:21.0-SNAPSHOT")
+    implementation("com.vaadin:vaadin-quarkus:$vaadinQuarkusVersion")
+    implementation("io.quarkus:quarkus-undertow-websockets")
+
+    // logging
+    // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
+    implementation "org.slf4j:slf4j-simple:1.7.30"
+}

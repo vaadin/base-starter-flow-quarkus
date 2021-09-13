@@ -1,0 +1,10 @@
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    plugins {
+        id 'io.quarkus' version "${quarkusVersion}"
+        id 'com.vaadin' version "${vaadinVersion}"
+    }
+}
