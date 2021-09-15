@@ -30,18 +30,11 @@ vaadin {
 }
 
 dependencies {
-    implementation enforcedPlatform("com.vaadin:vaadin-bom:$vaadinVersion") {
-        // Remove exclude when jandex is published 21.0.1+
-        exclude group: 'com.vaadin', module: 'vaadin-core-jandex'
-    }
+    implementation enforcedPlatform("com.vaadin:vaadin-bom:$vaadinVersion")
     implementation enforcedPlatform("io.quarkus.platform:quarkus-bom:$quarkusVersion")
 
     // Vaadin
-    implementation("com.vaadin:vaadin-core") {
-        // Remove exclude when jandex is published 21.0.1+
-        exclude group: 'com.vaadin', module: 'vaadin-core-jandex'
-    }
-    implementation("com.vaadin:vaadin-core-jandex:21.0-SNAPSHOT")
+    implementation("com.vaadin:vaadin-core")
     implementation("com.vaadin:vaadin-quarkus:$vaadinQuarkusVersion")
     implementation("io.quarkus:quarkus-undertow-websockets")
 
