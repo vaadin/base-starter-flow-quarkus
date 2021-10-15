@@ -20,7 +20,7 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>21.0.2</vaadin.version>
+        <vaadin.version>21.0.3</vaadin.version>
 
         <quarkus.version>2.2.2.Final</quarkus.version>
     </properties>
@@ -146,8 +146,6 @@
                     <systemPropertyVariables>
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
-                        <!-- TODO: Enable liveReload when websockets are in use -->
-                        <vaadin.devmode.liveReload.enabled>false</vaadin.devmode.liveReload.enabled>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
