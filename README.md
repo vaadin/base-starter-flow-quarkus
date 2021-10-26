@@ -10,19 +10,12 @@ Starter is also available for [gradle](https://github.com/vaadin/base-starter-fl
 
 Import the project to the IDE of your choosing as a Maven project. 
 
-Run application using
-```
-mvn clean package quarkus:dev
-```
-or just
-```
-mvn
-```
+Run application using `mvnw` (Windows), or `./mvnw` (Mac & Linux).
 
 Open [http://localhost:8080/](http://localhost:8080/) in browser.
 
-If you want to run your app locally in production mode
+If you want to run your app locally in production mode, call `mvnw package -Pproduction` (Windows), or `./mvnw package -Pproduction` (Mac & Linux)
+and then
 ```
-mvn package -Pproduction
 java -jar target/quarkus-app/quarkus-run.jar
 ```
