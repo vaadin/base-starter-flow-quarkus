@@ -14,6 +14,10 @@ Run application using
 ```
 mvn clean package quarkus:dev
 ```
+or just
+```
+mvn
+```
 
 Open [http://localhost:8080/](http://localhost:8080/) in browser.
 

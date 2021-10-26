@@ -111,6 +111,7 @@
     </dependencies>
 
     <build>
+        <defaultGoal>package quarkus:dev</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>com.vaadin</groupId>
