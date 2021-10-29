@@ -35,6 +35,7 @@ dependencies {
 
     // Vaadin
     implementation("com.vaadin:vaadin-core")
+    implementation("com.vaadin:vaadin-core-jandex")
     implementation("com.vaadin:vaadin-quarkus:$vaadinQuarkusVersion")
     implementation("io.quarkus:quarkus-undertow-websockets")
 
