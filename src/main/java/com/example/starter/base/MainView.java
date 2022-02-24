@@ -3,6 +3,10 @@ package com.example.starter.base;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
+import com.vaadin.flow.component.charts.Chart;
+import com.vaadin.flow.component.charts.model.ChartType;
+import com.vaadin.flow.component.charts.model.Configuration;
+import com.vaadin.flow.component.charts.model.ListSeries;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
@@ -20,6 +24,18 @@ public class MainView extends VerticalLayout {
     GreetService greetService;
 
     public MainView() {
+
+        Chart chart = new Chart(ChartType.COLUMN);
+        Configuration conf = chart.getConfiguration();
+        conf.setTitle("Reindeer Kills by Predators");
+        conf.setSubTitle("Kills Grouped by Counties");
+        ListSeries series = new ListSeries("Diameter");
+        series.setData(4900,  12100,  12800,
+                6800,  143000, 125000,
+                51100, 49500);
+        conf.addSeries(series);
+        add(chart);
+        
         // Use TextField for standard text input
         TextField textField = new TextField("Your name");
         textField.addThemeName("bordered");
