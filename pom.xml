@@ -20,9 +20,9 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>23.0.0</vaadin.version>
+        <vaadin.version>23.0.1</vaadin.version>
 
-        <quarkus.version>2.5.4.Final</quarkus.version>
+        <quarkus.version>2.7.4.Final</quarkus.version>
     </properties>
 
     <repositories>
