@@ -77,7 +77,7 @@
     "@vaadin/vaadin-confirm-dialog": "22.0.12",
     "@vaadin/vaadin-context-menu": "22.0.12",
     "@vaadin/vaadin-cookie-consent": "22.0.12",
-    "@vaadin/vaadin-core-shrinkwrap": "22.0.13",
+    "@vaadin/vaadin-core-shrinkwrap": "22.0.14",
     "@vaadin/vaadin-crud": "22.0.12",
     "@vaadin/vaadin-custom-field": "22.0.12",
     "@vaadin/vaadin-date-picker": "22.0.12",
@@ -118,7 +118,7 @@
     "@vaadin/virtual-list": "22.0.12",
     "@webcomponents/shadycss": "1.9.6",
     "construct-style-sheets-polyfill": "3.0.4",
-    "date-fns": "2.23.0",
+    "date-fns": "2.28.0",
     "lit": "2.0.0"
   },
   "devDependencies": {
@@ -140,8 +140,8 @@
     "loader-utils": "2.0.0",
     "typescript": "4.4.3",
     "webpack": "4.46.0",
-    "webpack-cli": "4.9.0",
-    "webpack-dev-server": "4.1.1",
+    "webpack-cli": "4.9.2",
+    "webpack-dev-server": "4.8.1",
     "webpack-merge": "4.2.2",
     "workbox-core": "6.4.2",
     "workbox-precaching": "6.4.2",
@@ -223,7 +223,7 @@
       "@vaadin/vaadin-confirm-dialog": "22.0.12",
       "@vaadin/vaadin-context-menu": "22.0.12",
       "@vaadin/vaadin-cookie-consent": "22.0.12",
-      "@vaadin/vaadin-core-shrinkwrap": "22.0.13",
+      "@vaadin/vaadin-core-shrinkwrap": "22.0.14",
       "@vaadin/vaadin-crud": "22.0.12",
       "@vaadin/vaadin-custom-field": "22.0.12",
       "@vaadin/vaadin-date-picker": "22.0.12",
@@ -264,7 +264,7 @@
       "@vaadin/virtual-list": "22.0.12",
       "@webcomponents/shadycss": "1.9.6",
       "construct-style-sheets-polyfill": "3.0.4",
-      "date-fns": "2.23.0",
+      "date-fns": "2.28.0",
       "lit": "2.0.0"
     },
     "devDependencies": {
@@ -282,13 +282,13 @@
       "loader-utils": "2.0.0",
       "typescript": "4.4.3",
       "webpack": "4.46.0",
-      "webpack-cli": "4.9.0",
-      "webpack-dev-server": "4.1.1",
+      "webpack-cli": "4.9.2",
+      "webpack-dev-server": "4.8.1",
       "webpack-merge": "4.2.2",
       "workbox-core": "6.4.2",
       "workbox-precaching": "6.4.2",
       "workbox-webpack-plugin": "6.4.2"
     },
-    "hash": "846eb556abe2eb6be39d74966732c4c2d6e4ba3a61e7ffedc9b20e7b819c3d7c"
+    "hash": "d9f7c176384209cc05a94480237f5e6c96625b2f3958dc1b396e042d9f4bf059"
   }
 }
