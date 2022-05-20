@@ -19,3 +19,19 @@ and then
 ```
 java -jar target/quarkus-app/quarkus-run.jar
 ```
+
+### Including vaadin-jandex for Pro components
+If you are using Pro components such GridPro you need to provide the Jandex index for them as well. 
+Although, this can be achieved by adding their names one-by-one in the `application.properties` similar to the following example:
+```properties
+quarkus.index-dependency.vaadin-grid-pro.group-id=com.vaadin
+quarkus.index-dependency.vaadin-grid-pro.artifact-id=vaadin-grid-pro-flow
+```
+Vaadin recommends using the official Jandex index for the Pro components which is published as part of the platform:
+```xml
+<dependency>
+    <groupId>com.vaadin</groupId>
+    <artifactId>vaadin-jandex</artifactId>
+</dependency>
+```
+The above dependency has already added to the `pom.xml` and all you need to do is uncomment it when if needed. 
