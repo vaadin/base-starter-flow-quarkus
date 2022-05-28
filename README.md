@@ -1,14 +1,34 @@
-# Project Base for Vaadin Flow and Quarkus
+# TOMBNG -- Theatre of the mind bot, next generation
 
-This project can be used as a starting point to create your own Vaadin Flow application for Quarkus. It contains all the necessary configuration with some placeholder files to get you started.
+> You don't need to be crazy to be my friend ... ok, maybe you do. It's just more fun that way.
+>
+> -- @blue_eyed_darkness on TikTok
 
-Quarkus 2.0+ requires Java 11.
+![Maven](https://github.com/Paladins-Inn/tombng/workflows/CI/badge.svg)
 
-Starter is also available for [gradle](https://github.com/vaadin/base-starter-flow-quarkus/tree/gradle)
+## Abstract
+This is the next version of a Theatre of the Mind system supporting role playing games played via Discord.
 
-## Running the Application
+## License
+The license for the software is LGPL 3.0 or newer. Parts of the software may be licensed under other licences like MIT
+or Apache 2.0 - the files are marked appropriately.
 
-Import the project to the IDE of your choosing as a Maven project. 
+
+## Architecture
+
+tl;dr (ok, only the bullshit bingo words):
+- Immutable Objects (where frameworks allow)
+- Relying heavily on generated code
+- 100 % test coverage of human generated code
+- Every line of code not written is bug free!
+
+Code test coverage for human generated code should be 100%, machinge generated code is considered bugfree until proven
+wrong. Every line that needs not be written is a bug free line without need to test it. So aim for not writing code.
+
+
+## Running the Application for development
+
+Import the project to the IDE of your choosing as a Maven project.
 
 Run application using `mvnw` (Windows), or `./mvnw` (Mac & Linux).
 
@@ -20,18 +40,17 @@ and then
 java -jar target/quarkus-app/quarkus-run.jar
 ```
 
-### Including vaadin-jandex for Pro components
-If you are using Pro components such GridPro you need to provide the Jandex index for them as well. 
-Although, this can be achieved by adding their names one-by-one in the `application.properties` similar to the following example:
-```properties
-quarkus.index-dependency.vaadin-grid-pro.group-id=com.vaadin
-quarkus.index-dependency.vaadin-grid-pro.artifact-id=vaadin-grid-pro-flow
-```
-Vaadin recommends using the official Jandex index for the Pro components which is published as part of the platform:
-```xml
-<dependency>
-    <groupId>com.vaadin</groupId>
-    <artifactId>vaadin-jandex</artifactId>
-</dependency>
-```
-The above dependency has already added to the `pom.xml` and all you need to do is uncomment it when if needed. 
+
+## Distribution
+Currently there is no distribution of this software.
+
+
+## Note from the author
+This software is meant do be perfected not finished.
+
+If someone is interested in getting it faster, we may team up. I'm open for that. But be warned: I want to do it
+_right_. So no short cuts to get faster. And be prepared for some basic discussions about the architecture or software
+design :-).
+
+---
+Bensheim, 2021-05-24

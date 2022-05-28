@@ -1,0 +1,45 @@
+---
+application:
+  name: Theatre of Mind Bot
+  version: 1.0-SNAPSHOT
+
+
+quarkus:
+  oidc:
+    application-type: web-app
+    authentication:
+      cookie-path: /
+
+    logout:
+      path: /logout
+      post-logout-path: /
+      backchannel:
+        path: /back-channel-logout
+
+  http:
+    auth:
+      permission:
+        ui:
+          paths: /*
+          policy: authenticated
+        api:
+          paths: /api/*
+          policy: permit
+        observability:
+          paths: /q/*
+          policy: permit
+
+  log:
+    console:
+      json: true
+    min-level: TRACE
+    level: INFO
+    category:
+      "de.kaiserpfalzedv":
+        level: TRACE
+
+"%dev":
+  quarkus:
+    log:
+      console:
+        json: false
