@@ -19,7 +19,7 @@ But be sure to also enable production mode for Vaadin, it will not work in nativ
 A command to compile the native binary:
 
 ```
-mvn clean install -Pnative,production
+./mvnw clean install -Pnative,production
 ```
 
 The native binary is generated to target directory with `-runner` postfix. 
