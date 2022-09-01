@@ -1,6 +1,6 @@
 package com.example.starter.base;
 
-import javax.enterprise.context.Dependent;
+import jakarta.enterprise.context.Dependent;
 
 @Dependent
 public class GreetService {

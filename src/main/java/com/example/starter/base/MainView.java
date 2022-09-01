@@ -1,5 +1,7 @@
 package com.example.starter.base;
 
+import jakarta.inject.Inject;
+
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -7,8 +9,6 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
-
-import javax.inject.Inject;
 
 /**
  * The main view contains a button and a click listener.
@@ -38,7 +38,7 @@ public class MainView extends VerticalLayout {
 
         // Use custom CSS classes to apply styling. This is defined in shared-styles.css.
         addClassName("centered-content");
-        
+
         add(textField, button);
     }
 }
