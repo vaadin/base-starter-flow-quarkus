@@ -18,7 +18,11 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
+<!--        <vaadin.version>23.2-SNAPSHOT</vaadin.version>-->
+<!--        <flow.version>23.2.jakarta-servlet5-SNAPSHOT</flow.version>-->
+
         <vaadin.version>23.2-SNAPSHOT</vaadin.version>
+        <flow.version>24.0-SNAPSHOT</flow.version>
 
 <!--        <quarkus.version>2.7.4.Final</quarkus.version>-->
         <quarkus.version>999-jakarta-SNAPSHOT</quarkus.version>
@@ -105,7 +109,7 @@
                 <artifactId>flow-bom</artifactId>
                 <type>pom</type>
                 <scope>import</scope>
-                <version>23.2.jakarta-servlet5-SNAPSHOT</version>
+                <version>${flow.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.vaadin</groupId>
