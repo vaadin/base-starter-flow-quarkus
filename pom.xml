@@ -89,6 +89,22 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+        <pluginRepository>
+            <name>s01 OSSRH Snapshots</name>
+            <id>s01-ossrh-snapshots-repo</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
+        </pluginRepository>
     </pluginRepositories>
 
     <dependencyManagement>
