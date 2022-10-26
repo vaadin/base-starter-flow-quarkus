@@ -86,7 +86,7 @@
                 https://maven.vaadin.com/vaadin-prereleases/
             </url>
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
             </snapshots>
         </pluginRepository>
         <pluginRepository>
