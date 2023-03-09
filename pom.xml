@@ -18,8 +18,8 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>24.0-SNAPSHOT</vaadin.version>
-        <flow.version>24.0-SNAPSHOT</flow.version>
+        <vaadin.version>24.0.0</vaadin.version>
+        <flow.version>24.0.0</flow.version>
 
         <quarkus.version>999-jakarta-SNAPSHOT</quarkus.version>
         <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
