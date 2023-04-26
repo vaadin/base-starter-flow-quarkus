@@ -2,7 +2,7 @@
 
 This project can be used as a starting point to create your own Vaadin Flow application for Quarkus. It contains all the necessary configuration with some placeholder files to get you started.
 
-Quarkus 2.0+ requires Java 11.
+Quarkus 3.0+ requires Java 17.
 
 Starter is also available for [gradle](https://github.com/vaadin/base-starter-flow-quarkus/tree/gradle)
 
