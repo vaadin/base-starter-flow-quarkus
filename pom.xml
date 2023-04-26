@@ -18,9 +18,9 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>24.0.4</vaadin.version>
+        <vaadin.version>24.0.5</vaadin.version>
 
-        <quarkus.platform.version>3.0.0.CR2</quarkus.platform.version>
+        <quarkus.platform.version>3.0.1.Final</quarkus.platform.version>
         <surefire-plugin.version>3.0.0</surefire-plugin.version>
 
     </properties>
