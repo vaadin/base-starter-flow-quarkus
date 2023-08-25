@@ -20,7 +20,7 @@
 
         <vaadin.version>24.1.6</vaadin.version>
 
-        <quarkus.platform.version>3.0.1.Final</quarkus.platform.version>
+        <quarkus.platform.version>3.3.0</quarkus.platform.version>
         <surefire-plugin.version>3.0.0</surefire-plugin.version>
 
     </properties>
