@@ -63,13 +63,6 @@
         </dependency>
         -->
 
-        <!-- Quarkus always pulls in slf4j-jboss-logmanager into target/lib; don't use slf4j-simple -->
-        <dependency>
-            <groupId>org.jboss.slf4j</groupId>
-            <artifactId>slf4j-jboss-logmanager</artifactId>
-            <version>1.1.0.Final</version>
-        </dependency>
-
     </dependencies>
 
     <build>
