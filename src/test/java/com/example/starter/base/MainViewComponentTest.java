@@ -6,7 +6,6 @@ import jakarta.inject.Singleton;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.router.Route;
 import com.vaadin.quarkus.QuarkusInstantiatorFactory;
-import com.vaadin.quarkus.annotation.VaadinServiceEnabled;
 import com.vaadin.testbench.unit.quarkus.QuarkusUIUnitTest;
 import io.quarkus.arc.Unremovable;
 import io.quarkus.arc.processor.AnnotationsTransformer;
@@ -33,8 +32,6 @@ import org.junit.jupiter.api.Test;
  * Adding @{@link Unremovable} annotation to the view makes the test work.
  */
 @QuarkusComponentTest(value = {
-        VaadinServiceEnabled.class,
-        Route.class,
         QuarkusInstantiatorFactory.class,
         MainView.class,
         GreetService.class

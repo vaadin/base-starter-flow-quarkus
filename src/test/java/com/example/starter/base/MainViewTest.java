@@ -1,6 +1,7 @@
 package com.example.starter.base;
 
 import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.testbench.unit.ViewPackages;
 import com.vaadin.testbench.unit.quarkus.QuarkusUIUnitTest;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Assertions;
@@ -8,6 +9,7 @@ import org.junit.jupiter.api.Test;
 
 
 @QuarkusTest
+@ViewPackages
 class MainViewTest extends QuarkusUIUnitTest {
 
     @Test
