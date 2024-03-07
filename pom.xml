@@ -18,12 +18,14 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>24.3.6</vaadin.version>
+        <vaadin.version>24.4.0.alpha8</vaadin.version>
 
         <quarkus.platform.version>3.3.0</quarkus.platform.version>
         <surefire-plugin.version>3.0.0</surefire-plugin.version>
 
     </properties>
+    <pluginRepositories><pluginRepository><id>v</id><url>https://maven.vaadin.com/vaadin-prereleases</url></pluginRepository></pluginRepositories>
+    <repositories><repository><id>v</id><url>https://maven.vaadin.com/vaadin-prereleases</url></repository></repositories>
 
     <dependencyManagement>
         <dependencies>
@@ -48,6 +50,12 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-quarkus-extension</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>hilla-dev</artifactId>
+                </exclusion>
+            </exclusions>
             <version>${vaadin.version}</version>
         </dependency>
 
