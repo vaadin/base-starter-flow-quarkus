@@ -7,8 +7,8 @@ plugins {
 defaultTasks("build")
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 compileJava {
@@ -34,12 +34,8 @@ dependencies {
     implementation enforcedPlatform("io.quarkus.platform:quarkus-bom:$quarkusVersion")
 
     // Vaadin
-    implementation("com.vaadin:vaadin-core")
-    implementation("com.vaadin:vaadin-core-jandex")
-    implementation("com.vaadin:vaadin-quarkus:$vaadinQuarkusVersion")
-    implementation("io.quarkus:quarkus-undertow-websockets")
-
-    // logging
-    // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
-    implementation "org.slf4j:slf4j-simple:1.7.30"
+    implementation("com.vaadin:vaadin-quarkus-extension:$vaadinVersion")
+    // Uncomment the following if you are using any of the Pro components
+    // implementation("com.vaadin:vaadin")
+    // implementation("com.vaadin:vaadin-jandex")
 }

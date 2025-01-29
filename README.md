@@ -15,8 +15,7 @@ Run application using
 
 Open [http://localhost:8080/](http://localhost:8080/) in browser.
 
-If you want to run your app locally in production mode, call `mvnw package -Pproduction` (Windows), or `./mvnw package -Pproduction` (Mac & Linux)
-and then
+If you want to run your app locally in production mode, call
 ```
 ./gradlew -Pvaadin.productionMode
 java -jar build/quarkus-app/quarkus-run.jar
@@ -36,4 +35,4 @@ Vaadin recommends using the official Jandex index for the Pro components which i
     <artifactId>vaadin-jandex</artifactId>
 </dependency>
 ```
-The above dependency has already added to the `pom.xml` and all you need to do is uncomment it when if needed. 
+The above dependency has already added to the `build.gradle` and all you need to do is uncomment it when if needed. 
