@@ -29,10 +29,7 @@ quarkus.index-dependency.vaadin-grid-pro.group-id=com.vaadin
 quarkus.index-dependency.vaadin-grid-pro.artifact-id=vaadin-grid-pro-flow
 ```
 Vaadin recommends using the official Jandex index for the Pro components which is published as part of the platform:
-```xml
-<dependency>
-    <groupId>com.vaadin</groupId>
-    <artifactId>vaadin-jandex</artifactId>
-</dependency>
+```
+implementation("com.vaadin:vaadin-jandex")
 ```
 The above dependency has already added to the `build.gradle` and all you need to do is uncomment it when if needed. 
