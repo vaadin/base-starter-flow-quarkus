@@ -10,14 +10,14 @@ Starter is also available for [gradle](https://github.com/vaadin/base-starter-fl
 
 Import the project to the IDE of your choosing as a Maven project. 
 
-Run the Quarkus application using your preferred method like IDE plugin, CLI `quarkus dev` or Maven  `mvnw quarkus:dev` (Windows), or `./mvnw quarkus:dev` (Mac & Linux) (or shorthand `mvn` as defaultGoal is `quarkus:dev`).
+Run the Quarkus application using your preferred method like IDE plugin, CLI `quarkus dev` or Gradle  `gradlew quarkusDev` (Windows), or `./gradlew quarkusDev` (Mac & Linux) (or shorthand `gradlew` as defaultGoal is `quarkus:dev`).
 
 Open [http://localhost:8080/](http://localhost:8080/) in browser.
 
-If you want to run your app locally in production mode, call `mvnw package` (Windows), or `./mvnw package` (Mac & Linux)
+If you want to run your app locally in production mode, call `gradlew package` (Windows), or `./gradlew package` (Mac & Linux)
 and then
 ```
-java -jar target/quarkus-app/quarkus-run.jar
+java -jar build/quarkus-app/quarkus-run.jar
 ```
 
 ### Including vaadin-jandex for Pro components
@@ -28,10 +28,7 @@ quarkus.index-dependency.vaadin-grid-pro.group-id=com.vaadin
 quarkus.index-dependency.vaadin-grid-pro.artifact-id=vaadin-grid-pro-flow
 ```
 Vaadin recommends using the official Jandex index for the Pro components which is published as part of the platform:
-```xml
-<dependency>
-    <groupId>com.vaadin</groupId>
-    <artifactId>vaadin-jandex</artifactId>
-</dependency>
 ```
-The above dependency has already added to the `pom.xml` and all you need to do is uncomment it when if needed. 
+implementation("com.vaadin:vaadin-jandex")
+```
+The above dependency has already added to the `build.gradle` and all you need to do is uncomment it when if needed. 

@@ -4,6 +4,10 @@
 .project
 .classpath
 
+# gradle files
+.gradle
+build
+
 *.iml
 .DS_Store
 
@@ -13,6 +17,7 @@ src/main/frontend/generated/
 pnpmfile.js
 vite.generated.ts
 webpack.generated.js
+.npmrc
 
 # Browser drivers for local integration tests
 drivers/

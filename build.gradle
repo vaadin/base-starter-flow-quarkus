@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'io.quarkus'
+    id 'com.vaadin'
+}
+
+defaultTasks("build")
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-parameters'
+}
+
+repositories {
+    mavenCentral()
+    maven { setUrl("https://maven.vaadin.com/vaadin-prereleases") }
+    mavenLocal()
+}
+
+// The following pnpmEnable = true is not needed as pnpm is used by default,
+// this is just an example of how to configure the Gradle Vaadin Plugin:
+// for more configuraion options please see: https://vaadin.com/docs/latest/guide/start/gradle/#all-options
+vaadin {
+    pnpmEnable = true
+}
+
+dependencies {
+    implementation enforcedPlatform("com.vaadin:vaadin-bom:$vaadinVersion")
+    implementation enforcedPlatform("io.quarkus.platform:quarkus-bom:$quarkusVersion")
+
+    // Vaadin
+    implementation("com.vaadin:vaadin-quarkus-extension:$vaadinVersion")
+    // Uncomment the following if you are using any of the Pro components
+    // implementation("com.vaadin:vaadin")
+    // implementation("com.vaadin:vaadin-jandex")
+}
