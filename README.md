@@ -6,7 +6,7 @@ Quarkus 3.0+ requires Java 17.
 
 ## Running the Application
 
-Import the project to the IDE of your choosing as a Maven project. 
+Import the project to the IDE of your choosing as a Gradle project. 
 
 Run application using
 ```
