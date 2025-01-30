@@ -8,7 +8,7 @@ Starter is also available for [gradle](https://github.com/vaadin/base-starter-fl
 
 ## Running the Application
 
-Import the project to the IDE of your choosing as a Maven project. 
+Import the project to the IDE of your choosing as a Gradle project. 
 
 Run the Quarkus application using your preferred method like IDE plugin, CLI `quarkus dev` or Gradle  `gradlew quarkusDev` (Windows), or `./gradlew quarkusDev` (Mac & Linux) (or shorthand `gradlew` as defaultGoal is `quarkus:dev`).
 
