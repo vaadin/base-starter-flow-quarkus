@@ -18,12 +18,19 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>24.8.6</vaadin.version>
+        <vaadin.version>25.0.0-alpha7</vaadin.version>
 
-        <quarkus.platform.version>3.15.3</quarkus.platform.version>
+        <quarkus.platform.version>3.24.2</quarkus.platform.version>
         <surefire-plugin.version>3.0.0</surefire-plugin.version>
 
     </properties>
+
+    <repositories>
+        <repository>
+            <id>vaadin-prereleases</id>
+            <url>https://maven.vaadin.com/vaadin-prereleases</url>
+        </repository>
+    </repositories>
 
     <dependencyManagement>
         <dependencies>
