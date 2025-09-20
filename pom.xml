@@ -18,7 +18,7 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>25.0.0-alpha7</vaadin.version>
+        <vaadin.version>25.0-SNAPSHOT</vaadin.version>
 
         <quarkus.platform.version>3.24.2</quarkus.platform.version>
         <surefire-plugin.version>3.0.0</surefire-plugin.version>
@@ -61,8 +61,26 @@
     <dependencies>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-quarkus-extension</artifactId>
+            <artifactId>vaadin-quarkus</artifactId>
+            <version>3.0-SNAPSHOT</version>
+        </dependency>
+        <!-- Commented to exclude vaadin-dev that should be automatically imported by the app -->
+        <!--
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-core</artifactId>
             <version>${vaadin.version}</version>
+        </dependency>
+        -->
+        <!-- Simulates vaadin-core without vaadin-dev -->
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-core-internal</artifactId>
+            <version>${vaadin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-core-jandex</artifactId>
         </dependency>
 
         <!-- Uncomment the following if you are using any of the Pro components -->
@@ -110,40 +128,4 @@
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <!-- Vaadin Production mode is activated using -Pproduction -->
-            <id>production</id>
-            <dependencies>
-                <dependency>
-                    <groupId>com.vaadin</groupId>
-                    <artifactId>vaadin-core</artifactId>
-                    <exclusions>
-                        <exclusion>
-                            <groupId>com.vaadin</groupId>
-                            <artifactId>vaadin-dev</artifactId>
-                        </exclusion>
-                    </exclusions>
-                </dependency>
-            </dependencies>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.vaadin</groupId>
-                        <artifactId>vaadin-maven-plugin</artifactId>
-                        <version>${vaadin.version}</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>prepare-frontend</goal>
-                                    <goal>build-frontend</goal>
-                                </goals>
-                                <phase>compile</phase>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
