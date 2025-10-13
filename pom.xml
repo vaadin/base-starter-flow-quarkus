@@ -61,8 +61,8 @@
     <dependencies>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-quarkus</artifactId>
-            <version>3.0-SNAPSHOT</version>
+            <artifactId>vaadin-quarkus-extension</artifactId>
+            <version>${vaadin.version}</version>
         </dependency>
         <!-- Commented to exclude vaadin-dev that should be automatically imported by the app -->
         <!--
@@ -72,16 +72,6 @@
             <version>${vaadin.version}</version>
         </dependency>
         -->
-        <!-- Simulates vaadin-core without vaadin-dev -->
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-core-internal</artifactId>
-            <version>${vaadin.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-core-jandex</artifactId>
-        </dependency>
 
         <!-- Uncomment the following if you are using any of the Pro components -->
         <!--
