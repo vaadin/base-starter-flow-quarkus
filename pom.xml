@@ -21,8 +21,8 @@
 
         <vaadin.version>25.0.0-beta1</vaadin.version>
 
-        <quarkus.platform.version>3.24.2</quarkus.platform.version>
-        <surefire-plugin.version>3.0.0</surefire-plugin.version>
+        <quarkus.platform.version>3.28.3</quarkus.platform.version>
+        <surefire-plugin.version>3.5.4</surefire-plugin.version>
 
     </properties>
 
