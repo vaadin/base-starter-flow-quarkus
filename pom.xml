@@ -64,14 +64,6 @@
             <artifactId>vaadin-quarkus-extension</artifactId>
             <version>${vaadin.version}</version>
         </dependency>
-        <!-- Commented to exclude vaadin-dev that should be automatically imported by the app -->
-        <!--
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-core</artifactId>
-            <version>${vaadin.version}</version>
-        </dependency>
-        -->
 
         <!-- Uncomment the following if you are using any of the Pro components -->
         <!--
