@@ -3,6 +3,7 @@
    Visit https://vaadin.com/docs/latest/styling/application-theme and
    https://vaadin.com/docs/latest/styling/lumo for more information.
 */
+@import "aura/aura.css";
 
 /* Example: CSS class name to center align the content . */
 .centered-content {
