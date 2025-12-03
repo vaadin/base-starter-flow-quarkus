@@ -19,7 +19,7 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>25.0.0-beta1</vaadin.version>
+        <vaadin.version>25.0.0-beta8</vaadin.version>
 
         <quarkus.platform.version>3.28.3</quarkus.platform.version>
         <surefire-plugin.version>3.5.4</surefire-plugin.version>
@@ -71,12 +71,6 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.vaadin</groupId>
-                    <artifactId>vaadin-dev</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
@@ -86,7 +80,7 @@
     </dependencies>
 
     <build>
-        <defaultGoal>package quarkus:dev</defaultGoal>
+        <defaultGoal>quarkus:dev</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>io.quarkus.platform</groupId>
