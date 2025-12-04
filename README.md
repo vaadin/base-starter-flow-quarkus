@@ -2,19 +2,19 @@
 
 This project can be used as a starting point to create your own Vaadin Flow application for Quarkus. It contains all the necessary configuration with some placeholder files to get you started.
 
-Quarkus 3.0+ requires Java 17.
+Quarkus 3.0+ requires Java 21.
 
-Starter is also available for [gradle](https://github.com/vaadin/base-starter-flow-quarkus/tree/gradle)
+Starter is also available for [Maven](https://github.com/vaadin/base-starter-flow-quarkus/tree/v25)
 
 ## Running the Application
 
 Import the project to the IDE of your choosing as a Gradle project. 
 
-Run the Quarkus application using your preferred method like IDE plugin, CLI `quarkus dev` or Gradle  `gradlew quarkusDev` (Windows), or `./gradlew quarkusDev` (Mac & Linux) (or shorthand `gradlew` as defaultGoal is `quarkus:dev`).
+Run the Quarkus application using your preferred method like IDE plugin, CLI `quarkus dev` or Gradle  `gradlew quarkusDev` (Windows), or `./gradlew quarkusDev` (Mac & Linux) (or shorthand `gradlew` as defaultGoal is `quarkusDev`).
 
 Open [http://localhost:8080/](http://localhost:8080/) in browser.
 
-If you want to run your app locally in production mode, call `gradlew package` (Windows), or `./gradlew package` (Mac & Linux)
+If you want to run your app locally in production mode, call `gradlew build` (Windows), or `./gradlew build` (Mac & Linux)
 and then
 ```
 java -jar build/quarkus-app/quarkus-run.jar

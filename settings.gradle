@@ -1,11 +1,9 @@
 pluginManagement {
     repositories {
-        mavenCentral()
         gradlePluginPortal()
-        maven { setUrl("https://maven.vaadin.com/vaadin-prereleases") }
+        mavenCentral()
     }
     plugins {
         id 'io.quarkus' version "${quarkusVersion}"
-        id 'com.vaadin' version "${vaadinVersion}"
     }
 }
