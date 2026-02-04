@@ -1,5 +1,6 @@
 package com.example.starter.base;
 
+import com.vaadin.flow.component.dependency.JsModule;
 import jakarta.inject.Inject;
 
 import com.vaadin.flow.component.Key;
@@ -14,6 +15,7 @@ import com.vaadin.flow.router.Route;
  * The main view contains a button and a click listener.
  */
 @Route("")
+@JsModule("./my.js")
 public class MainView extends VerticalLayout {
 
     @Inject

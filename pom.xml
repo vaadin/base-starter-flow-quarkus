@@ -7,6 +7,7 @@
     <groupId>org.acme</groupId>
     <artifactId>base-starter-flow-quarkus</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>quarkus</packaging>
 
     <properties>
         <maven.compiler.release>21</maven.compiler.release>
@@ -21,7 +22,7 @@
 
         <vaadin.version>25.0.4</vaadin.version>
 
-        <quarkus.platform.version>3.28.3</quarkus.platform.version>
+        <quarkus.platform.version>3.31.1</quarkus.platform.version>
         <surefire-plugin.version>3.5.4</surefire-plugin.version>
 
     </properties>
@@ -87,15 +88,6 @@
                 <artifactId>quarkus-maven-plugin</artifactId>
                 <version>${quarkus.platform.version}</version>
                 <extensions>true</extensions>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>build</goal>
-                            <goal>generate-code</goal>
-                            <goal>generate-code-tests</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -107,6 +99,21 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+            <!--
+            Uncomment if setting vaadin.build.enabled=false in application properties
+            <plugin>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-maven-plugin</artifactId>
+                <version>${vaadin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build-frontend</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            -->
         </plugins>
     </build>
 
