@@ -19,9 +19,9 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <vaadin.version>25.0.7</vaadin.version>
+        <vaadin.version>25.1.0</vaadin.version>
 
-        <quarkus.platform.version>3.28.3</quarkus.platform.version>
+        <quarkus.platform.version>3.32.0</quarkus.platform.version>
         <surefire-plugin.version>3.5.4</surefire-plugin.version>
 
     </properties>
@@ -50,7 +50,7 @@
                 <version>${vaadin.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.quarkus.platform</groupId>
+                <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-bom</artifactId>
                 <version>${quarkus.platform.version}</version>
                 <type>pom</type>
@@ -83,7 +83,7 @@
         <defaultGoal>quarkus:dev</defaultGoal>
         <plugins>
             <plugin>
-                <groupId>io.quarkus.platform</groupId>
+                <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-maven-plugin</artifactId>
                 <version>${quarkus.platform.version}</version>
                 <extensions>true</extensions>
